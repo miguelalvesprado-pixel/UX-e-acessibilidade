@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Projeto com foco em UX e acessibilidade, apresentando princípios de interfaces inclusivas."
+    />
+    <title>UX e Acessibilidade | Interfaces inclusivas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+
+    <header class="site-header">
+      <div class="container header-content">
+        <a class="brand" href="#topo" aria-label="Ir para o início">Incluir+</a>
+        <nav aria-label="Navegação principal">
+          <a href="#principios">Princípios</a>
+          <a href="#checklist">Checklist</a>
+          <a href="#recursos">Recursos</a>
+        </nav>
+        <button id="toggle-contrast" class="contrast-toggle" type="button" aria-pressed="false">
+          Ativar alto contraste
+        </button>
+      </div>
+    </header>
+
+    <main id="conteudo-principal">
+      <section class="hero" id="topo">
+        <div class="container hero-content">
+          <div class="hero-copy">
+            <p class="eyebrow">UX e acessibilidade</p>
+            <h1>Construindo interfaces inclusivas para todos os usuários</h1>
+            <p>
+              Boas experiências não são apenas bonitas; elas precisam ser claras, navegáveis e acolhedoras para pessoas com diferentes necessidades.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#checklist">Ver checklist</a>
+              <a class="button secondary" href="#recursos">Explorar recursos</a>
+            </div>
+            <ul class="hero-highlights" aria-label="Benefícios principais">
+              <li>Legibilidade e contraste adequado</li>
+              <li>Navegação simples por teclado</li>
+              <li>Conteúdo claro e objetivo</li>
+            </ul>
+          </div>
+
+          <aside class="hero-card" aria-label="Resumo do projeto">
+            <h2>O que este projeto demonstra</h2>
+            <ul>
+              <li>Estrutura semântica correta</li>
+              <li>Foco visível nos elementos interativos</li>
+              <li>Textos claros e objetivos</li>
+              <li>Contraste acessível para leitura</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="principios">
+        <div class="container">
+          <h2>Princípios que orientam a experiência</h2>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Clareza</h3>
+              <p>Use linguagem simples, títulos objetivos e instruções diretas para reduzir esforço cognitivo.</p>
+            </article>
+            <article class="card">
+              <h3>Consistência</h3>
+              <p>Padrões previsíveis ajudam o usuário a aprender rápido e agir com confiança.</p>
+            </article>
+            <article class="card">
+              <h3>Flexibilidade</h3>
+              <p>Ofereça diferentes formas de interagir, incluindo navegação por teclado e conteúdo adaptável.</p>
+            </article>
+            <article class="card">
+              <h3>Feedback</h3>
+              <p>Mensagens de confirmação e estados visíveis tornam a experiência mais segura e intuitiva.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="checklist">
+        <div class="container">
+          <h2>Checklist de inclusão</h2>
+          <div class="checklist">
+            <div class="check-item">
+              <span class="icon" aria-hidden="true">✓</span>
+              <div>
+                <h3>Rótulos acessíveis</h3>
+                <p>Todos os campos de formulário possuem labels associados e nomes claros.</p>
+              </div>
+            </div>
+            <div class="check-item">
+              <span class="icon" aria-hidden="true">✓</span>
+              <div>
+                <h3>Contraste adequado</h3>
+                <p>Textos e ícones mantêm boa legibilidade em diferentes ambientes.</p>
+              </div>
+            </div>
+            <div class="check-item">
+              <span class="icon" aria-hidden="true">✓</span>
+              <div>
+                <h3>Estrutura semântica</h3>
+                <p>Uso correto de títulos, listas, navegação e seções facilita a compreensão.</p>
+              </div>
+            </div>
+            <div class="check-item">
+              <span class="icon" aria-hidden="true">✓</span>
+              <div>
+                <h3>Foco visível</h3>
+                <p>Elementos interativos mostram estado de foco para quem navega por teclado.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="recursos">
+        <div class="container resources-layout">
+          <div>
+            <h2>Boas práticas em ação</h2>
+            <p>
+              Interfaces inclusivas consideram diferentes perfis de uso, desde pessoas com deficiência visual até usuários em contexto de distração ou baixa conectividade.
+            </p>
+            <ul class="resource-list">
+              <li>Priorize conteúdo em ordem lógica.</li>
+              <li>Evite textos excessivamente longos e ambíguos.</li>
+              <li>Use estados claros para botões e links.</li>
+              <li>Teste sua interface com teclado e leitores de tela.</li>
+            </ul>
+          </div>
+
+          <form class="contact-card" aria-labelledby="form-title">
+            <h3 id="form-title">Receba uma checklist prática</h3>
+            <label for="name">Nome</label>
+            <input id="name" name="name" type="text" autocomplete="name" />
+
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" />
+
+            <button class="button primary" type="submit">Quero receber</button>
+            <p class="form-note" id="status-message" aria-live="polite">
+              Preencha os campos e envie para simular um fluxo simples.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Incluir+ · UX e acessibilidade em prática.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
